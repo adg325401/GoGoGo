@@ -1,161 +1,182 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">褰辨</string>
-    <string name="app_settings">璁剧疆</string>
-    <string name="app_history">鍘嗗彶璁板綍</string>
+    <string name="app_name">影梭</string>
+    <string name="app_settings">设置</string>
+    <string name="app_history">历史记录</string>
     <string name="app_author">ZCShou</string>
     <string name="app_email">zcsexp@gmail.com</string>
-    <string name="app_statement">浠呬緵瀛︿範浣跨敤锛屽惁鍒欏悗鏋滆嚜璐燂紒</string>
-    <string name="app_service_tips">褰辨鏈嶅姟姝ｅ湪杩愯涓?/string>
-    <string name="app_agreement">鐢ㄦ埛鍗忚</string>
-    <string name="app_agreement_content">"1. 鏈蒋浠朵笓涓哄涔?Android 寮€鍙戜娇鐢紝涓嶄細鏀堕泦浠讳綍鐢ㄦ埛鏁版嵁銆?
-    "涓ョ鍒╃敤鏈蒋浠朵镜鐘粬浜洪殣绉佹潈鎴栬€呯敤浜庢父鎴忕墴鍒╋紝濡傝蒋浠朵娇鐢ㄨ€呬笉鑳介伒瀹堟瑙勫畾锛?璇风珛鍗冲垹闄ゃ€?
-    "瀵逛簬鍥犵敤鎴蜂娇鐢ㄦ湰杞欢鑰岄€犳垚鑷韩鎴栦粬浜洪殣绉佹硠闇茬瓑浠讳綍涓嶈壇鍚庢灉锛屽潎鐢辩敤鎴疯嚜琛屾壙鎷咃紝杞欢浣滆€呬笉璐熶换浣曡矗浠汇€俓n"
-    "2. 鐢ㄦ埛涓嶅緱瀵规湰杞欢浜у搧杩涜鍙嶅悜宸ョ▼锛坮everse engineer锛夈€佸弽鍚戠紪璇戯紙decompile锛夋垨鍙嶆眹缂栵紙disassemble锛夛紝 杩濊€呭睘浜庝镜鏉冭涓猴紝骞惰嚜琛屾壙鎷呯敱姝や骇鐢熺殑涓嶅埄鍚庢灉銆俓n"
-    "3. 杞欢淇濊瘉涓嶅惈浠讳綍鐥呮瘨锛屾湪椹紝绛夌牬鍧忕敤鎴锋暟鎹殑鎭舵剰浠ｇ爜锛屼絾鏄敱浜庢湰杞欢浜у搧鍙互閫氳繃缃戠粶绛夐€斿緞涓嬭浇銆佷紶鎾紝瀵逛簬浠庨潪杞欢浣滆€呮寚瀹氱珯鐐逛笅杞界殑鏈蒋浠朵骇鍝佽蒋浠朵綔鑰呮棤娉曚繚璇佽杞欢鏄惁鎰熸煋璁＄畻鏈虹梾姣掋€佹槸鍚﹂殣钘忔湁浼鐨勭壒娲涗紛鏈ㄩ┈绋嬪簭鎴栬€呴粦瀹㈣蒋浠讹紝涓嶆壙鎷呯敱姝ゅ紩璧风殑鐩存帴鍜岄棿鎺ユ崯瀹宠矗浠汇€俓n"
-    "4. 杞欢浼氫笉鏂洿鏂帮紝浠ヤ究鍙婃椂涓虹敤鎴锋彁渚涙柊鍔熻兘鍜屼慨姝ｈ蒋浠朵腑鐨凚UG銆?鍚屾椂杞欢浣滆€呬繚璇佹湰杞欢鍦ㄥ崌绾ц繃绋嬩腑涔熶笉鍚湁浠讳綍鏃ㄥ湪鐮村潖鐢ㄦ埛璁＄畻鏈烘暟鎹殑鎭舵剰浠ｇ爜銆俓n"
-    "5. 鐢变簬鐢ㄦ埛璁＄畻鏈鸿蒋纭欢鐜鐨勫樊寮傛€у拰澶嶆潅鎬э紝鏈蒋浠舵墍鎻愪緵鐨勫悇椤瑰姛鑳藉苟涓嶈兘淇濊瘉鍦ㄤ换浣曟儏鍐典笅閮借兘姝ｅ父鎵ц鎴栬揪鍒扮敤鎴锋墍鏈熸湜鐨勭粨鏋溿€?鐢ㄦ埛浣跨敤鏈蒋浠舵墍浜х敓鐨勪竴鍒囧悗鏋滐紝杞欢浣滆€呬笉鎵挎媴浠讳綍璐ｄ换銆俓n"
-    "6. 濡傛灉鐢ㄦ埛鑷瀹夎鏈蒋浠讹紝鍗宠〃鏄庣敤鎴蜂俊浠绘湰杞欢浣滆€咃紝鑷効閫夋嫨瀹夎鏈蒋浠讹紝骞舵帴鍙楁湰鍗忚鎵€鏈夋潯娆俱€?濡傛灉鐢ㄦ埛涓嶆帴鍙楁湰鍗忚锛岃绔嬪嵆鍒犻櫎銆俓n"
+    <string name="app_statement">仅供学习使用，否则后果自负！</string>
+    <string name="app_service_tips">影梭服务正在运行中</string>
+    <string name="app_agreement">用户协议</string>
+    <string name="app_agreement_content">"1. 本软件专为学习 Android 开发使用，不会收集任何用户数据。"
+    "严禁利用本软件侵犯他人隐私权或者用于游戏牟利，如软件使用者不能遵守此规定， 请立即删除。"
+    "对于因用户使用本软件而造成自身或他人隐私泄露等任何不良后果，均由用户自行承担，软件作者不负任何责任。\n"
+    "2. 用户不得对本软件产品进行反向工程（reverse engineer）、反向编译（decompile）或反汇编（disassemble）， 违者属于侵权行为，并自行承担由此产生的不利后果。\n"
+    "3. 软件保证不含任何病毒，木马，等破坏用户数据的恶意代码，但是由于本软件产品可以通过网络等途径下载、传播，对于从非软件作者指定站点下载的本软件产品软件作者无法保证该软件是否感染计算机病毒、是否隐藏有伪装的特洛伊木马程序或者黑客软件，不承担由此引起的直接和间接损害责任。\n"
+    "4. 软件会不断更新，以便及时为用户提供新功能和修正软件中的BUG。 同时软件作者保证本软件在升级过程中也不含有任何旨在破坏用户计算机数据的恶意代码。\n"
+    "5. 由于用户计算机软硬件环境的差异性和复杂性，本软件所提供的各项功能并不能保证在任何情况下都能正常执行或达到用户所期望的结果。 用户使用本软件所产生的一切后果，软件作者不承担任何责任。\n"
+    "6. 如果用户自行安装本软件，即表明用户信任软件作者，自愿选择安装本软件，并接受本协议所有条款。 如果用户不接受本协议，请立即删除。\n"
     </string>
-    <string name="app_privacy">闅愮鏀跨瓥</string>
-    <string name="app_privacy_content">"1. 鏈蒋浠朵笓涓哄涔?Android 寮€鍙戜娇鐢紝涓嶄細鏀堕泦浠讳綍鐢ㄦ埛鏁版嵁銆俓n"
-    "2. 鐢ㄦ埛涓嶅緱瀵规湰杞欢浜у搧杩涜鍙嶅悜宸ョ▼锛坮everse engineer锛夈€佸弽鍚戠紪璇戯紙decompile锛夋垨鍙嶆眹缂栵紙disassemble锛夛紝 杩濊€呭睘浜庝镜鏉冭涓猴紝骞惰嚜琛屾壙鎷呯敱姝や骇鐢熺殑涓嶅埄鍚庢灉銆俓n"
-    "3. 杞欢淇濊瘉涓嶅惈浠讳綍鐥呮瘨锛屾湪椹紝绛夌牬鍧忕敤鎴锋暟鎹殑鎭舵剰浠ｇ爜锛屼絾鏄敱浜庢湰杞欢浜у搧鍙互閫氳繃缃戠粶绛夐€斿緞涓嬭浇銆佷紶鎾紝瀵逛簬浠庨潪杞欢浣滆€呮寚瀹氱珯鐐逛笅杞界殑鏈蒋浠朵骇鍝佽蒋浠朵綔鑰呮棤娉曚繚璇佽杞欢鏄惁鎰熸煋璁＄畻鏈虹梾姣掋€佹槸鍚﹂殣钘忔湁浼鐨勭壒娲涗紛鏈ㄩ┈绋嬪簭鎴栬€呴粦瀹㈣蒋浠讹紝涓嶆壙鎷呯敱姝ゅ紩璧风殑鐩存帴鍜岄棿鎺ユ崯瀹宠矗浠汇€俓n"
-    "4. 杞欢浼氫笉鏂洿鏂帮紝浠ヤ究鍙婃椂涓虹敤鎴锋彁渚涙柊鍔熻兘鍜屼慨姝ｈ蒋浠朵腑鐨凚UG銆?鍚屾椂杞欢浣滆€呬繚璇佹湰杞欢鍦ㄥ崌绾ц繃绋嬩腑涔熶笉鍚湁浠讳綍鏃ㄥ湪鐮村潖鐢ㄦ埛璁＄畻鏈烘暟鎹殑鎭舵剰浠ｇ爜銆俓n"
-    "5. 鐢变簬鐢ㄦ埛璁＄畻鏈鸿蒋纭欢鐜鐨勫樊寮傛€у拰澶嶆潅鎬э紝鏈蒋浠舵墍鎻愪緵鐨勫悇椤瑰姛鑳藉苟涓嶈兘淇濊瘉鍦ㄤ换浣曟儏鍐典笅閮借兘姝ｅ父鎵ц鎴栬揪鍒扮敤鎴锋墍鏈熸湜鐨勭粨鏋溿€?鐢ㄦ埛浣跨敤鏈蒋浠舵墍浜х敓鐨勪竴鍒囧悗鏋滐紝杞欢浣滆€呬笉鎵挎媴浠讳綍璐ｄ换銆俓n"
-    "6. 濡傛灉鐢ㄦ埛鑷瀹夎鏈蒋浠讹紝鍗宠〃鏄庣敤鎴蜂俊浠绘湰杞欢浣滆€咃紝鑷効閫夋嫨瀹夎鏈蒋浠讹紝骞舵帴鍙楁湰鍗忚鎵€鏈夋潯娆俱€?濡傛灉鐢ㄦ埛涓嶆帴鍙楁湰鍗忚锛岃绔嬪嵆鍒犻櫎銆俓n"
+    <string name="app_privacy">隐私政策</string>
+    <string name="app_privacy_content">"1. 本软件专为学习 Android 开发使用，不会收集任何用户数据。\n"
+    "2. 用户不得对本软件产品进行反向工程（reverse engineer）、反向编译（decompile）或反汇编（disassemble）， 违者属于侵权行为，并自行承担由此产生的不利后果。\n"
+    "3. 软件保证不含任何病毒，木马，等破坏用户数据的恶意代码，但是由于本软件产品可以通过网络等途径下载、传播，对于从非软件作者指定站点下载的本软件产品软件作者无法保证该软件是否感染计算机病毒、是否隐藏有伪装的特洛伊木马程序或者黑客软件，不承担由此引起的直接和间接损害责任。\n"
+    "4. 软件会不断更新，以便及时为用户提供新功能和修正软件中的BUG。 同时软件作者保证本软件在升级过程中也不含有任何旨在破坏用户计算机数据的恶意代码。\n"
+    "5. 由于用户计算机软硬件环境的差异性和复杂性，本软件所提供的各项功能并不能保证在任何情况下都能正常执行或达到用户所期望的结果。 用户使用本软件所产生的一切后果，软件作者不承担任何责任。\n"
+    "6. 如果用户自行安装本软件，即表明用户信任软件作者，自愿选择安装本软件，并接受本协议所有条款。 如果用户不接受本协议，请立即删除。\n"
     </string>
-    <string name="app_agreement_privacy">宸查槄璇汇€婄敤鎴峰崗璁€嬪拰銆婇殣绉佹斂绛栥€?/string>
-    <string name="app_error_agreement">蹇呴』鍏堟帴鍙梊n銆婄敤鎴峰崗璁€嬪拰銆婇殣绉佹斂绛栥€?/string>
-    <string name="app_error_read">璇蜂緷娆￠槄璇诲苟鎺ュ彈\n銆婄敤鎴峰崗璁€嬪拰銆婇殣绉佹斂绛栥€?/string>
-    <string name="app_error_gps">瀹氫綅涓嶅彲鐢紝璇锋鏌?GPS 鏄惁寮€鍚?/string>
-    <string name="app_error_network">缃戠粶涓嶅彲鐢紝璇锋鏌ョ綉缁滆繛鎺?/string>
-    <string name="app_error_permission">鏉冮檺涓嶈冻锛岃鎺堜簣鐩稿叧鏉冮檺</string>
-    <string name="app_error_input">杈撳叆鏈夎锛岃妫€鏌ヨ緭鍏ユ槸鍚﹀悎娉?/string>
-    <string name="app_error_input_null">杈撳叆涓嶈兘涓虹┖锛岃閲嶆柊杈撳叆鍐呭</string>
-    <string name="app_error_search">鏌ユ壘澶辫触锛岃妫€鏌ョ綉缁滄垨瀹氫綅</string>
-    <string name="app_error_location">璇峰厛閫夋嫨浣嶇疆</string>
-    <string name="app_error_dev">寮€鍙戣€呮ā寮忔湭寮€鍚紝鏃犳硶璺宠浆锛佽鑷鎼滅储寮€鍚柟娉?/string>
-    <string name="app_error_param">闈炴硶鍙傛暟</string>
-    <string name="app_error_protocol">璇峰厛闃呰骞舵帴鏀剁敤鎴峰崗璁?/string>
-    <string name="app_error_username">鐢ㄦ埛鍚嶄笉鍚堟硶</string>
-    <string name="app_error_code">娉ㄥ唽鐮佷笉鑳戒负绌?/string>
-    <string name="app_error_longitude">缁忓害瓒呭嚭闄愬埗!\n鍙栧€硷細-180.0 ~ 180.0</string>
-    <string name="app_error_latitude">绾害瓒呭嚭闄愬埗!\n鍙栧€硷細-90.0 ~ 90.0</string>
-    <string name="app_search_null">娌℃湁鍖归厤缁撴灉锛岃閲嶆柊鎼滅储</string>
-    <string name="app_search_tips">璇疯緭鍏ユ煡鎵惧唴瀹?/string>
-    <string name="app_location_ok">浣嶇疆宸蹭紶閫?/string>
-    <string name="app_location_copy">浣嶇疆宸插鍒跺埌鍓垏鏉?/string>
-    <string name="app_location_save">浣嶇疆宸蹭繚瀛?/string>
-    <string name="welcome_btn_txt">杩涘叆搴旂敤</string>
-    <string name="app_btn_agree">鍚屾剰骞剁户缁?/string>
-    <string name="app_btn_disagree">涓嶅悓鎰?/string>
-    <string name="setting_group_move">绉诲姩</string>
-    <string name="setting_joystick_type">鎽囨潌绫诲瀷</string>
-    <string name="setting_walk">姝ヨ閫熷害(绫?绉?</string>
+    <string name="app_agreement_privacy">已阅读《用户协议》和《隐私政策》</string>
+    <string name="app_error_agreement">必须先接受\n《用户协议》和《隐私政策》</string>
+    <string name="app_error_read">请依次阅读并接受\n《用户协议》和《隐私政策》</string>
+    <string name="app_error_gps">定位不可用，请检查 GPS 是否开启</string>
+    <string name="app_error_network">网络不可用，请检查网络连接</string>
+    <string name="app_error_permission">权限不足，请授予相关权限</string>
+    <string name="app_error_input">输入有误，请检查输入是否合法</string>
+    <string name="app_error_input_null">输入不能为空，请重新输入内容</string>
+    <string name="app_error_search">查找失败，请检查网络或定位</string>
+    <string name="app_error_location">请先选择位置</string>
+    <string name="app_error_dev">开发者模式未开启，无法跳转！请自行搜索开启方法</string>
+    <string name="app_error_param">非法参数</string>
+    <string name="app_error_protocol">请先阅读并接收用户协议</string>
+    <string name="app_error_username">用户名不合法</string>
+    <string name="app_error_code">注册码不能为空</string>
+    <string name="app_error_longitude">经度超出限制!\n取值：-180.0 ~ 180.0</string>
+    <string name="app_error_latitude">纬度超出限制!\n取值：-90.0 ~ 90.0</string>
+    <string name="app_search_null">没有匹配结果，请重新搜索</string>
+    <string name="app_search_tips">请输入查找内容</string>
+    <string name="app_location_ok">位置已传送</string>
+    <string name="app_location_copy">位置已复制到剪切板</string>
+    <string name="app_location_save">位置已保存</string>
+
+    <!-- 欢迎页 -->
+    <string name="welcome_btn_txt">进入应用</string>
+    <string name="app_btn_agree">同意并继续</string>
+    <string name="app_btn_disagree">不同意</string>
+
+    <!-- 移动相关参数 -->
+    <string name="setting_group_move">移动</string>
+    <string name="setting_joystick_type">摇杆类型</string>
+    <string name="setting_walk">步行速度(米/秒)</string>
     <string name="setting_walk_default">1.2</string>
-    <string name="setting_run">璺戞閫熷害(绫?绉?</string>
+    <string name="setting_run">跑步速度(米/秒)</string>
     <string name="setting_run_default">3.6</string>
-    <string name="setting_bike">椹鹃┒閫熷害(绫?绉?</string>
+    <string name="setting_bike">驾驶速度(米/秒)</string>
     <string name="setting_bike_default">10.0</string>
-    <string name="setting_altitude">娴锋嫈楂樺害(绫?</string>
+    <string name="setting_altitude">海拔高度(米)</string>
     <string name="setting_altitude_default">55.0</string>
-    <string name="setting_group_location_offset">浣嶇疆鍋忕Щ</string>
-    <string name="setting_random_offset">闅忔満鍋忕Щ</string>
-    <string name="setting_random_offset_summary">浠呭湪浣跨敤鍘嗗彶浣嶇疆鏃剁敓鏁?/string>
+
+    <!-- 位置偏移相关参数 -->
+    <string name="setting_group_location_offset">位置偏移</string>
+    <string name="setting_random_offset">随机偏移</string>
+    <string name="setting_random_offset_summary">仅在使用历史位置时生效</string>
     <string name="setting_random_offset_default">10.0</string>
-    <string name="setting_lat_max_offset">缁忓害鏈€澶у亸绉昏窛绂?绫?</string>
-    <string name="setting_lon_max_offset">绾害鏈€澶у亸绉昏窛绂?绫?</string>
-    <string name="setting_group_log">璁板綍</string>
-    <string name="setting_log_off">鍏抽棴鏃ュ織</string>
-    <string name="setting_history_expiration">鍘嗗彶璁板綍鏈夋晥鏈?澶?</string>
-    <string name="setting_group_about">鍏充簬</string>
-    <string name="setting_version">鐗堟湰鍙?/string>
-    <string name="setting_author">寮€鍙戣€?/string>
+    <string name="setting_lat_max_offset">经度最大偏移距离(米)</string>
+    <string name="setting_lon_max_offset">纬度最大偏移距离(米)</string>
+    <!-- 记录相关参数 -->
+    <string name="setting_group_log">记录</string>
+    <string name="setting_log_off">关闭日志</string>
+    <string name="setting_history_expiration">历史记录有效期(天)</string>
+    <!-- 关于相关参数 -->
+    <string name="setting_group_about">关于</string>
+    <string name="setting_version">版本号</string>
+    <string name="setting_author">开发者</string>
+
+    <!-- 历史记录页面 -->
     <string name="history_expiration">7</string>
-    <string name="history_location_default_name">鍦板浘浣嶇疆</string>
-    <string name="history_idle">鏆傛棤鍘嗗彶璁板綍</string>
-    <string name="history_delete_ok">鍒犻櫎鎴愬姛锛?/string>
-    <string name="history_delete_error">鍒犻櫎璁板綍澶辫触</string>
-    <string name="history_error_location">瀹氫綅澶辫触锛岃鎵嬪姩閫夊彇瀹氫綅鐐?/string>
-    <string name="history_error_search">鏈悳绱㈠埌鎸囧畾鍐呭</string>
-    <string name="note_show">鏄剧ず鎽囨潌</string>
-    <string name="note_hide">闅愯棌鎽囨潌</string>
-    <string name="joystick_map_tips">鎼滅储鎴栫偣鍑诲湴鍥句綅缃?/string>
-    <string name="joystick_history_tips">鎼滅储鎴栫偣鍑诲巻鍙蹭綅缃?/string>
-    <string name="joystick_history">鍘嗗彶璁板綍</string>
-    <string name="joystick_map">鍦板浘</string>
-    <string name="joystick_move">绉诲姩</string>
-    <string name="joystick_walk">姝ヨ</string>
-    <string name="joystick_run">璺戞</string>
-    <string name="joystick_bike">鑷杞?/string>
-    <string name="nav_drawer_open">鎵撳紑瀵艰埅鑿滃崟</string>
-    <string name="nav_drawer_close">鍏抽棴瀵艰埅鑿滃崟</string>
-    <string name="nav_menu_history">鍘嗗彶璁板綍</string>
-    <string name="nav_menu_settings">璁剧疆</string>
-    <string name="nav_menu_dev">寮€鍙戜汉鍛橀€夐」</string>
-    <string name="nav_menu_more">鏇村</string>
-    <string name="nav_menu_upgrade">妫€娴嬫洿鏂?/string>
-    <string name="nav_menu_feedback">闂鍙嶉</string>
-    <string name="nav_menu_contact">鑱旂郴浣滆€?/string>
-    <string name="nav_app_tips">浠呬緵瀛︿範浣跨敤锛屽惁鍒欏悗鏋滆嚜璐?</string>
-    <string name="label_longitude">缁忓害</string>
-    <string name="label_latitude">绾害</string>
-    <string name="input_position_ok">浼犻€?/string>
-    <string name="input_position_cancel">鍙栨秷</string>
-    <string name="input_position_baidu">BD09 鍧愭爣绯?/string>
-    <string name="input_position_gps">GPS 鍧愭爣绯?/string>
-    <string name="input_button">杈撳叆浣嶇疆</string>
-    <string name="cur_position">杩斿洖褰撳墠浣嶇疆</string>
-    <string name="zoom_in">鏀惧ぇ</string>
-    <string name="zoom_out">缂╁皬</string>
-    <string name="map_pic_sate">鍗槦鍥?/string>
-    <string name="map_pic_normal">鏅€氬浘</string>
-    <string name="update_title">鏂扮増鏈彲鐢?/string>
-    <string name="update_downloading">鍗囩骇鏂囦欢涓嬭浇涓€傘€傘€?/string>
-    <string name="update_last">鎭枩锛屽奖姊凡鏄渶鏂扮増</string>
-    <string name="update_download">绔嬪嵆涓嬭浇</string>
-    <string name="update_ignore">蹇界暐涓€娆?/string>
-    <string name="update_time">鏇存柊鏃堕棿锛?/string>
-    <string name="update_commit">鎻愪氦淇℃伅锛?/string>
-    <string name="running_loop_title">鑷畾涔夌粫鍦堣窇姝?/string>
-    <string name="running_loop_lat">绾害</string>
-    <string name="running_loop_lng">缁忓害</string>
-    <string name="running_loop_radius">鍗婂緞 (绫?</string>
-    <string name="running_loop_speed">閫熷害 (km/h)</string>
-    <string name="running_loop_laps">鍦堟暟 (0=鏃犻檺)</string>
-    <string name="running_loop_direction">鏂瑰悜</string>
-    <string name="clockwise">椤烘椂閽?/string>
-    <string name="counter_clockwise">閫嗘椂閽?/string>
-    <string name="btn_set_center">浠庡湴鍥鹃€夌偣</string>
-    <string name="btn_confirm_center">纭鍧愭爣</string>
-    <string name="btn_start">寮€濮嬭窇姝?/string>
-    <string name="btn_pause">鏆傚仠</string>
-    <string name="btn_resume">缁х画</string>
-    <string name="btn_stop">鍋滄</string>
-    <string name="status_idle">绛夊緟寮€濮?/string>
-    <string name="status_running">璺戞涓?/string>
-    <string name="status_paused">宸叉殏鍋?/string>
-    <string name="status_completed">宸插畬鎴?/string>
-    <string name="progress_format">绗?%1 / %2 鍦?/string>
-    <string name="running_loop_permission_denied">闇€瑕佷綅缃潈闄愭墠鑳戒娇鐢ㄦ鍔熻兘</string>
-    <string name="running_loop_tap_map">璇峰湪鍦板浘涓婄偣鍑婚€夋嫨鍦嗗績浣嶇疆</string>
-    <string name="running_loop_input_lat_lng">璇峰厛璁剧疆鍦嗗績鍧愭爣</string>
-    <string name="running_loop_invalid_coords">璇疯緭鍏ユ湁鏁堢殑缁忕含搴?/string>
-    <string name="running_loop_center_set">鍦嗗績宸茶缃?/string>
-    <string name="running_loop_no_center">璇峰厛璁剧疆鍦嗗績</string>
-    <string name="running_loop_no_radius">璇疯緭鍏ユ湁鏁堢殑鍗婂緞鍊?/string>
-    <string name="running_loop_radius_range">鍗婂緞鑼冨洿锛?0-2000绫?/string>
-    <string name="running_loop_invalid_number">璇疯緭鍏ユ湁鏁堢殑鏁板瓧</string>
-    <string name="running_loop_completed">鎭枩瀹屾垚 %1 鍦堣窇姝ワ紒</string>
-    <string name="notification_channel_name">璺戞妯℃嫙</string>
-    <string name="notification_channel_desc">缁曞湀璺戞妯℃嫙閫氱煡</string>
-    <string name="main_btn_running_loop">缁曞湀璺戞</string>
-    <string name="running_loop_status_stopped">绛夊緟寮€濮?/string>
-    <string name="running_loop_progress_init">鍑嗗涓€?/string>
-    <string name="running_loop_start">寮€濮嬭窇姝?/string>
-    <string name="running_loop_pause">鏆傚仠</string>
-    <string name="running_loop_stop">鍋滄</string>
-    <string name="running_loop_resume">缁х画</string>
-    <string name="running_loop_complete">璺戞瀹屾垚</string>
+    <string name="history_location_default_name">地图位置</string>
+    <string name="history_idle">暂无历史记录</string>
+    <string name="history_delete_ok">删除成功！</string>
+    <string name="history_delete_error">删除记录失败</string>
+    <string name="history_error_location">定位失败，请手动选取定位点</string>
+    <string name="history_error_search">未搜索到指定内容</string>
+
+    <!-- 通知栏 -->
+    <string name="note_show">显示摇杆</string>
+    <string name="note_hide">隐藏摇杆</string>
+    <!-- 摇杆 -->
+    <string name="joystick_map_tips">搜索或点击地图位置</string>
+    <string name="joystick_history_tips">搜索或点击历史位置</string>
+    <string name="joystick_history">历史记录</string>
+    <string name="joystick_map">地图</string>
+    <string name="joystick_move">移动</string>
+    <string name="joystick_walk">步行</string>
+    <string name="joystick_run">跑步</string>
+    <string name="joystick_bike">自行车</string>
+    <!-- 导航页 -->
+    <string name="nav_drawer_open">打开导航菜单</string>
+    <string name="nav_drawer_close">关闭导航菜单</string>
+    <string name="nav_menu_history">历史记录</string>
+    <string name="nav_menu_settings">设置</string>
+    <string name="nav_menu_dev">开发人员选项</string>
+    <string name="nav_menu_more">更多</string>
+    <string name="nav_menu_upgrade">检测更新</string>
+    <string name="nav_menu_feedback">问题反馈</string>
+    <string name="nav_menu_contact">联系作者</string>
+    <string name="nav_app_tips">仅供学习使用，否则后果自负!</string>
+
+    <!-- 主界面 -->
+    <string name="label_longitude">经度</string>
+    <string name="label_latitude">纬度</string>
+    <string name="input_position_ok">传送</string>
+    <string name="input_position_cancel">取消</string>
+    <string name="input_position_baidu">BD09 坐标系</string>
+    <string name="input_position_gps">GPS 坐标系</string>
+    <string name="input_button">输入位置</string>
+    <string name="cur_position">返回当前位置</string>
+    <string name="zoom_in">放大</string>
+    <string name="zoom_out">缩小</string>
+
+    <!-- 百度地图 -->
+    <string name="map_pic_sate">卫星图</string>
+    <string name="map_pic_normal">普通图</string>
+
+    <!-- 更新 -->
+    <string name="update_title">新版本可用</string>
+    <string name="update_downloading">升级文件下载中。。。</string>
+    <string name="update_last">恭喜，影梭已是最新版</string>
+    <string name="update_download">立即下载</string>
+    <string name="update_ignore">忽略一次</string>
+    <string name="update_time">更新时间：</string>
+    <string name="update_commit">提交信息：</string>
+
+    <!-- 绕圈跑步功能 -->
+    <string name="running_loop_title">自定义绕圈跑步</string>
+    <string name="running_loop_lat">纬度</string>
+    <string name="running_loop_lng">经度</string>
+    <string name="running_loop_radius">半径 (米)</string>
+    <string name="running_loop_speed">速度 (km/h)</string>
+    <string name="running_loop_laps">圈数 (0=无限)</string>
+    <string name="running_loop_direction">方向</string>
+    <string name="clockwise">顺时针</string>
+    <string name="counter_clockwise">逆时针</string>
+    <string name="btn_set_center">从地图选点</string>
+    <string name="btn_confirm_center">确认坐标</string>
+    <string name="btn_start">开始跑步</string>
+    <string name="btn_pause">暂停</string>
+    <string name="btn_resume">继续</string>
+    <string name="btn_stop">停止</string>
+    <string name="status_idle">等待开始</string>
+    <string name="status_running">跑步中</string>
+    <string name="status_paused">已暂停</string>
+    <string name="status_completed">已完成</string>
+    <string name="progress_format">第 %1$d / %2$d 圈</string>
+    <string name="running_loop_permission_denied">需要位置权限才能使用此功能</string>
+    <string name="running_loop_tap_map">请在地图上点击选择圆心位置</string>
+    <string name="running_loop_input_lat_lng">请先设置圆心坐标</string>
+    <string name="running_loop_invalid_coords">请输入有效的经纬度</string>
+    <string name="running_loop_center_set">圆心已设置</string>
+    <string name="running_loop_no_center">请先设置圆心</string>
+    <string name="running_loop_no_radius">请输入有效的半径值</string>
+    <string name="running_loop_radius_range">半径范围：50-2000米</string>
+    <string name="running_loop_invalid_number">请输入有效的数字</string>
+    <string name="running_loop_completed">恭喜完成 %1$d 圈跑步！</string>
+    <string name="notification_channel_name">跑步模拟</string>
+    <string name="notification_channel_desc">绕圈跑步模拟通知</string>
+    <string name="main_btn_running_loop">绕圈跑步</string>
+    <string name="running_loop_status_stopped">等待开始</string>
+    <string name="running_loop_progress_init">准备中…</string>
+    <string name="running_loop_start">开始跑步</string>
+    <string name="running_loop_pause">暂停</string>
+    <string name="running_loop_stop">停止</string>
+    <string name="running_loop_resume">继续</string>
+    <string name="running_loop_complete">跑步完成</string>
 </resources>
