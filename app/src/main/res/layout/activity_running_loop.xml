@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="@color/background_card"
-        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
         android:elevation="8dp">
 
         <LinearLayout
