@@ -179,4 +179,19 @@
     <string name="running_loop_stop">停止</string>
     <string name="running_loop_resume">继续</string>
     <string name="running_loop_complete">跑步完成</string>
+    <string name="running_loop_section_center">鍦嗗績璁剧疆</string>
+    <string name="running_loop_hint_lat">杈撳叆绾害</string>
+    <string name="running_loop_hint_lng">杈撳叆缁忓害</string>
+    <string name="running_loop_select_center">浠庡湴鍥鹃€夋嫨</string>
+    <string name="running_loop_confirm_input">纭</string>
+    <string name="running_loop_section_params">璺戞鍙傛暟</string>
+    <string name="running_loop_label_radius">鍗婂緞</string>
+    <string name="running_loop_hint_radius">杈撳叆鍗婂緞(绫?</string>
+    <string name="running_loop_label_speed">閫熷害</string>
+    <string name="running_loop_label_laps">鍦堟暟</string>
+    <string name="running_loop_hint_laps">杈撳叆鍦堟暟</string>
+    <string name="running_loop_laps_hint_zero">0涓烘棤闄?/string>
+    <string name="running_loop_label_direction">鏂瑰悜</string>
+    <string name="running_loop_clockwise">椤烘椂閽?/string>
+    <string name="running_loop_counterclockwise">閫嗘椂閽?/string>
 </resources>
