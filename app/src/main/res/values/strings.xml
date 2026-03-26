@@ -172,4 +172,21 @@
     <string name="notification_channel_name">跑步模拟</string>
     <string name="notification_channel_desc">绕圈跑步模拟通知</string>
     <string name="main_btn_running_loop">绕圈跑步</string>
+
+    <string name="running_loop_section_center">圆心设置</string>
+    <string name="running_loop_hint_lat">输入纬度，如 31.2304</string>
+    <string name="running_loop_hint_lng">输入经度，如 121.4737</string>
+    <string name="running_loop_select_center">从地图选择</string>
+    <string name="running_loop_confirm_input">确认输入</string>
+    <string name="running_loop_section_params">跑步参数</string>
+    <string name="running_loop_label_radius">半径</string>
+    <string name="running_loop_hint_radius">输入半径（米）</string>
+    <string name="running_loop_label_speed">速度</string>
+    <string name="running_loop_label_laps">圈数</string>
+    <string name="running_loop_hint_laps">输入圈数（0=无限）</string>
+    <string name="running_loop_laps_hint_zero">输入0表示无限圈</string>
+    <string name="running_loop_label_direction">方向</string>
+    <string name="running_loop_clockwise">顺时针</string>
+    <string name="running_loop_counterclockwise">逆时针</string>
+
 </resources>
