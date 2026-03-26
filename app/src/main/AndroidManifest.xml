@@ -111,14 +111,14 @@
 
         <!-- 绕圈跑步界面 -->
         <activity
-            android:name=".gogogo.RunningLoopActivity"
+            android:name=".RunningLoopActivity"
             android:label="@string/running_loop_title"
             android:exported="false"
             android:screenOrientation="portrait" />
 
         <!-- 绕圈跑步定位服务 -->
         <service
-            android:name=".service.RunningLoopService"
+            android:name=".RunningLoopService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="location" />
