@@ -92,6 +92,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.zcshou.service.ServiceGo;
+import com.zcshou.gogogo.RunningLoopActivity;
 import com.zcshou.service.RunningLoopService;
 import com.zcshou.database.DataBaseHistoryLocation;
 import com.zcshou.database.DataBaseHistorySearch;
