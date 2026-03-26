@@ -55,13 +55,13 @@
     <!-- 绉诲姩鐩稿叧鍙傛暟 -->
     <string name="setting_group_move">绉诲姩</string>
     <string name="setting_joystick_type">鎽囨潌绫诲瀷</string>
-    <string name="setting_walk">姝ヨ閫熷害(绫?绉?</string>
+    <string name="setting_walk">姝ヨ閫熷害(绫?绉</string>
     <string name="setting_walk_default">1.2</string>
-    <string name="setting_run">璺戞閫熷害(绫?绉?</string>
+    <string name="setting_run">璺戞閫熷害(绫?绉</string>
     <string name="setting_run_default">3.6</string>
-    <string name="setting_bike">椹鹃┒閫熷害(绫?绉?</string>
+    <string name="setting_bike">椹鹃┒閫熷害(绫?绉</string>
     <string name="setting_bike_default">10.0</string>
-    <string name="setting_altitude">娴锋嫈楂樺害(绫?</string>
+    <string name="setting_altitude">娴锋嫈楂樺害(绫</string>
     <string name="setting_altitude_default">55.0</string>
 
     <!-- 浣嶇疆鍋忕Щ鐩稿叧鍙傛暟 -->
@@ -69,12 +69,12 @@
     <string name="setting_random_offset">闅忔満鍋忕Щ</string>
     <string name="setting_random_offset_summary">浠呭湪浣跨敤鍘嗗彶浣嶇疆鏃剁敓鏁?/string>
     <string name="setting_random_offset_default">10.0</string>
-    <string name="setting_lat_max_offset">缁忓害鏈€澶у亸绉昏窛绂?绫?</string>
-    <string name="setting_lon_max_offset">绾害鏈€澶у亸绉昏窛绂?绫?</string>
+    <string name="setting_lat_max_offset">缁忓害鏈€澶у亸绉昏窛绂?绫</string>
+    <string name="setting_lon_max_offset">绾害鏈€澶у亸绉昏窛绂?绫</string>
     <!-- 璁板綍鐩稿叧鍙傛暟 -->
     <string name="setting_group_log">璁板綍</string>
     <string name="setting_log_off">鍏抽棴鏃ュ織</string>
-    <string name="setting_history_expiration">鍘嗗彶璁板綍鏈夋晥鏈?澶?</string>
+    <string name="setting_history_expiration">鍘嗗彶璁板綍鏈夋晥鏈?澶</string>
     <!-- 鍏充簬鐩稿叧鍙傛暟 -->
     <string name="setting_group_about">鍏充簬</string>
     <string name="setting_version">鐗堟湰鍙?/string>
@@ -111,7 +111,7 @@
     <string name="nav_menu_upgrade">妫€娴嬫洿鏂?/string>
     <string name="nav_menu_feedback">闂鍙嶉</string>
     <string name="nav_menu_contact">鑱旂郴浣滆€?/string>
-    <string name="nav_app_tips">浠呬緵瀛︿範浣跨敤锛屽惁鍒欏悗鏋滆嚜璐?</string>
+    <string name="nav_app_tips">浠呬緵瀛︿範浣跨敤锛屽惁鍒欏悗鏋滆嚜璐</string>
 
     <!-- 涓荤晫闈?-->
     <string name="label_longitude">缁忓害</string>
@@ -142,7 +142,7 @@
     <string name="running_loop_title">鑷畾涔夌粫鍦堣窇姝?/string>
     <string name="running_loop_lat">绾害</string>
     <string name="running_loop_lng">缁忓害</string>
-    <string name="running_loop_radius">鍗婂緞 (绫?</string>
+    <string name="running_loop_radius">鍗婂緞 (绫</string>
     <string name="running_loop_speed">閫熷害 (km/h)</string>
     <string name="running_loop_laps">鍦堟暟 (0=鏃犻檺)</string>
     <string name="running_loop_direction">鏂瑰悜</string>
