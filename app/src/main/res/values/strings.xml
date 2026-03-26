@@ -137,4 +137,39 @@
     <string name="update_ignore">忽略一次</string>
     <string name="update_time">更新时间：</string>
     <string name="update_commit">提交信息：</string>
+
+    <!-- 绕圈跑步功能 -->
+    <string name="running_loop_title">自定义绕圈跑步</string>
+    <string name="running_loop_lat">纬度</string>
+    <string name="running_loop_lng">经度</string>
+    <string name="running_loop_radius">半径 (米)</string>
+    <string name="running_loop_speed">速度 (km/h)</string>
+    <string name="running_loop_laps">圈数 (0=无限)</string>
+    <string name="running_loop_direction">方向</string>
+    <string name="clockwise">顺时针</string>
+    <string name="counter_clockwise">逆时针</string>
+    <string name="btn_set_center">从地图选点</string>
+    <string name="btn_confirm_center">确认坐标</string>
+    <string name="btn_start">开始跑步</string>
+    <string name="btn_pause">暂停</string>
+    <string name="btn_resume">继续</string>
+    <string name="btn_stop">停止</string>
+    <string name="status_idle">等待开始</string>
+    <string name="status_running">跑步中</string>
+    <string name="status_paused">已暂停</string>
+    <string name="status_completed">已完成</string>
+    <string name="progress_format">第 %1$d / %2$d 圈</string>
+    <string name="running_loop_permission_denied">需要位置权限才能使用此功能</string>
+    <string name="running_loop_tap_map">请在地图上点击选择圆心位置</string>
+    <string name="running_loop_input_lat_lng">请先设置圆心坐标</string>
+    <string name="running_loop_invalid_coords">请输入有效的经纬度</string>
+    <string name="running_loop_center_set">圆心已设置</string>
+    <string name="running_loop_no_center">请先设置圆心</string>
+    <string name="running_loop_no_radius">请输入有效的半径值</string>
+    <string name="running_loop_radius_range">半径范围：50-2000米</string>
+    <string name="running_loop_invalid_number">请输入有效的数字</string>
+    <string name="running_loop_completed">恭喜完成 %1$d 圈跑步！</string>
+    <string name="notification_channel_name">跑步模拟</string>
+    <string name="notification_channel_desc">绕圈跑步模拟通知</string>
+    <string name="main_btn_running_loop">绕圈跑步</string>
 </resources>

@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_running_loop.xml
+    自定义绕圈模拟跑步界面
+
+    布局结构：
+    ┌─────────────────────────────────────┐
+    │  ToolBar (标题 + 返回)               │
+    ├─────────────────────────────────────┤
+    │                                     │
+    │         BaiduMapView (70%)          │
+    │   [实时显示圆圈 + 轨迹 + 当前位置]   │
+    │                                     │
+    ├─────────────────────────────────────┤
+    │  配置卡片（底部滚动）                │
+    │  ┌─ 圆心选择 ──────────────────┐   │
+    │  │  纬度 / 经度 + [从地图选点]  │   │
+    │  └──────────────────────────────┘  │
+    │  ┌─ 跑步参数 ──────────────────┐   │
+    │  │  半径 / 速度 / 圈数 / 方向  │   │
+    │  └──────────────────────────────┘  │
+    │  ┌─ 状态与进度 ────────────────┐   │
+    │  │  [开始] [暂停] [停止]       │   │
+    │  │  状态文字 / 进度数值         │   │
+    │  └──────────────────────────────┘  │
+    └─────────────────────────────────────┘
+-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_running">
+
+    <!-- ── 地图 ──────────────────────────────────────────────── -->
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mapview_loop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="top"
+        android:layout_marginBottom="8dp"
+        android:visibility="visible" />
+
+    <!-- 使用 NestedScrollView 使底部配置面板可滚动 -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_config"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/background_card"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        android:elevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- ── 拖动把手 ── -->
+            <View
+                android:layout_width="40dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/shape_drag_handle" />
+
+            <!-- ════ 卡片1：圆心选择 ════ -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <!-- 卡片标题 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/running_loop_section_center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- 纬度输入 -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/running_loop_hint_lat"
+                        app:boxStrokeColor="@color/colorPrimary"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_marginBottom="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_center_lat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:imeOptions="actionNext" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- 经度输入 -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/running_loop_hint_lng"
+                        app:boxStrokeColor="@color/colorPrimary"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_marginBottom="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_center_lng"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:imeOptions="actionDone" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- 操作按钮行 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- 从地图点击选圆心 -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_set_center"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/running_loop_select_center"
+                            android:textSize="13sp"
+                            app:icon="@drawable/ic_map_pin"
+                            app:iconSize="18dp"
+                            android:layout_marginEnd="8dp"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+                        <!-- 确认手动输入 -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_confirm_input"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/running_loop_confirm_input"
+                            android:textSize="13sp"
+                            android:onClick="onConfirmManualInput"
+                            app:icon="@drawable/ic_check"
+                            app:iconSize="18dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ════ 卡片2：跑步参数 ════ -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:strokeColor="@color/colorAccent"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <!-- 卡片标题 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/running_loop_section_params"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- 半径输入行 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/running_loop_label_radius"
+                            android:textSize="13sp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/running_loop_hint_radius"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_radius"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:text="200"
+                                android:imeOptions="actionNext" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:text="m"
+                            android:textSize="13sp"
+                            android:gravity="center"
+                            android:layout_marginStart="4dp" />
+                    </LinearLayout>
+
+                    <!-- 速度 SeekBar -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/running_loop_label_speed"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/tv_speed_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp" />
+
+                    <!-- 速度两端标签 + SeekBar -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:id="@+id/tv_speed_min"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1km/h"
+                            android:textSize="11sp"
+                            android:textColor="@color/text_secondary"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignBottom="@id/seekbar_speed" />
+
+                        <TextView
+                            android:id="@+id/tv_speed_max"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20km/h"
+                            android:textSize="11sp"
+                            android:textColor="@color/text_secondary"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignBottom="@id/seekbar_speed" />
+
+                        <SeekBar
+                            android:id="@+id/seekbar_speed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/tv_speed_min"
+                            android:layout_toStartOf="@id/tv_speed_max"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:progressTint="@color/colorAccent"
+                            android:thumbTint="@color/colorAccent" />
+                    </RelativeLayout>
+
+                    <!-- 圈数输入行 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/running_loop_label_laps"
+                            android:textSize="13sp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/running_loop_hint_laps"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_laps"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:text="0"
+                                android:imeOptions="actionDone" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/running_loop_laps_hint_zero"
+                            android:textSize="11sp"
+                            android:textColor="@color/text_secondary"
+                            android:layout_marginStart="6dp" />
+                    </LinearLayout>
+
+                    <!-- 方向选择 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/running_loop_label_direction"
+                        android:textSize="13sp"
+                        android:layout_marginBottom="6dp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_direction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rb_clockwise"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/running_loop_clockwise"
+                            android:checked="true"
+                            android:textSize="13sp" />
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rb_counterclockwise"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/running_loop_counterclockwise"
+                            android:textSize="13sp" />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ════ 卡片3：状态与控制 ════ -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <!-- 状态与进度 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:id="@+id/tv_status"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/running_loop_status_stopped"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:gravity="start|center_vertical" />
+
+                        <TextView
+                            android:id="@+id/tv_progress"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/running_loop_progress_init"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary"
+                            android:gravity="end|center_vertical" />
+                    </LinearLayout>
+
+                    <!-- 控制按钮行 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- 开始 -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_start"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/running_loop_start"
+                            android:layout_marginEnd="6dp"
+                            app:icon="@drawable/ic_play"
+                            app:iconSize="20dp"
+                            app:backgroundTint="@color/colorPrimary" />
+
+                        <!-- 暂停/继续 -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_pause"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/running_loop_pause"
+                            android:layout_marginEnd="6dp"
+                            android:enabled="false"
+                            app:icon="@drawable/ic_pause"
+                            app:iconSize="20dp"
+                            app:backgroundTint="@color/colorWarning"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+                        <!-- 停止 -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_stop"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/running_loop_stop"
+                            android:enabled="false"
+                            app:icon="@drawable/ic_stop"
+                            app:iconSize="20dp"
+                            app:backgroundTint="@color/colorError"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

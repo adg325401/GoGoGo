@@ -157,4 +157,10 @@
     <color name="black_semi_transparent">#B2000000</color>
     <color name="saffron">#F4B63E</color>
     <color name="eggplant">#663D4E</color>
+    <!-- 绕圈跑步功能颜色 -->
+    <color name="background_running">#F5F7FA</color>
+    <color name="background_card">#FFFFFF</color>
+    <color name="text_secondary">#8A94A6</color>
+    <color name="colorWarning">#FF9800</color>
+    <color name="colorError">#F44336</color>
 </resources>

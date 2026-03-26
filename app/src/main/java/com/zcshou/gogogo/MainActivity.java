@@ -92,6 +92,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.zcshou.service.ServiceGo;
+import com.zcshou.service.RunningLoopService;
 import com.zcshou.database.DataBaseHistoryLocation;
 import com.zcshou.database.DataBaseHistorySearch;
 import com.zcshou.utils.ShareUtils;
@@ -415,6 +416,9 @@ public class MainActivity extends BaseActivity implements SensorEventListener {
             if (id == R.id.nav_history) {
                 Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
 
+                startActivity(intent);
+            } else if (id == R.id.nav_running_loop) {
+                Intent intent = new Intent(MainActivity.this, RunningLoopActivity.class);
                 startActivity(intent);
             } else if (id == R.id.nav_settings) {
                 Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
