@@ -172,14 +172,7 @@
     <string name="notification_channel_name">璺戞妯℃嫙</string>
     <string name="notification_channel_desc">缁曞湀璺戞妯℃嫙閫氱煡</string>
     <string name="main_btn_running_loop">缁曞湀璺戞</string>
-    <string name="running_loop_status_stopped">绛夊緟寮€濮?/string>
-    <string name="running_loop_progress_init">鍑嗗涓€?/string>
-    <string name="running_loop_start">寮€濮嬭窇姝?/string>
-    <string name="running_loop_pause">鏆傚仠</string>
-    <string name="running_loop_stop">鍋滄</string>
-    <string name="running_loop_resume">缁х画</string>
-    <string name="running_loop_complete">璺戞瀹屾垚</string>
-    <string name="running_loop_status_stopped">绛夊緟寮€濮?/string>
+        <string name="running_loop_status_stopped">绛夊緟寮€濮?/string>
     <string name="running_loop_progress_init">鍑嗗涓€?/string>
     <string name="running_loop_start">寮€濮嬭窇姝?/string>
     <string name="running_loop_pause">鏆傚仠</string>
